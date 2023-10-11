@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { ProfiloComponent } from './profilo/profilo.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { HomeComponent } from './home/home.component';
     ProductListComponent,
     ProductDetailComponent,
     HomeComponent,
+    ProfiloComponent,
   ],
   bootstrap: [
     AppComponent
