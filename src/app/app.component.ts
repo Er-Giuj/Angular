@@ -1,66 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Component, OnInit } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
-interface Cliente{
-  nome:string,
-  cognome:string,
-  altezza?:number //altezza?:number => opzionale nella dichiarazione della variabile 'jsonIn',può essere omesso
-  indirizzo?:{
-    via:    string,
-    numero: string,
-    cap:    number,
-    citta:  string
-  }[],
-  email: string,
-  sesso: 'M' | 'F' | 'Altro',
-  dataNascita?: number,
-}// dentro 'Interface c'è solo la tippizzazione delle variabile,non inizializiamo o scriviamo funzioni dentro
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  // styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  // styleUrls: ["../../style.css"],
 })
 export class AppComponent implements OnInit {
+  // Nuova parte,Utilizzo servizi http
+  // -------------------------------------------------------------------------------
+  // non lasciare mai la tipizzazione 'any', deve essere di tipizzazione 'Fatture[]' che è un interfaccia di tipizzazione
+  drinks: any = [];
+  constructor(private http: HttpClient) {}
 
-  datiAnagrafici = true;
-  percorsoStudi = false;
-  esperienzeLavorative = false;
-
-  nome='';
-  altro='';
-
-  jsonIn:Cliente = {
-    nome: '',
-    cognome: '',
-    indirizzo: [],
-    email: '',
-    sesso: 'Altro',
-  }
-  constructor() {}
-
-  ngOnInit(): void {
-   
-  };
-  onDataNascitaChange(){};
-
-  // toggleSezione(nomeSezione: string) {
-  //   this.datiAnagrafici = false;
-  //   this.percorsoStudi = false;
-  //   this.esperienzeLavorative = false;
-
-  //   if(nomeSezione === 'datiAnagrafici') {
-  //     this.datiAnagrafici = true;
-  //   } else  if(nomeSezione === 'percorsoStudi') {
-  //     this.percorsoStudi = true;
-  //   } else if(nomeSezione === 'esperienzaLavorative') {
-  //     this.esperienzeLavorative = true;
-  //   }
-  // }
-
+  ngOnInit(): void {}
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
+*/
+/*
+  class CarelloService{
+    private prodotti:Prodotti[]=[];
+    private totale = 0;
+
+    aggiungiProdotto(prodotto:Prodotto){
+      this.prodotti.push(prodotto);
+      this.totale += prodotto.prezzo + prodotto.quantita;
+    }
+    eliminaProdotto(prodotto:Prodotto){}
+    cambiaQUantita(idProdotto:string, nuovaQuantita:number){}
+    svuotaCarello(){}
+    getProdotti(){return this.prodotti}
+    getTotale(){
+      return this.totale;
+    }
+    ricarcolaTotale(){}
+  }
 */

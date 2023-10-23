@@ -1,15 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
-import { ProfiloComponent } from './profilo/profilo.component';
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { HomeComponent } from "./home/home.component";
+import { ProfiloComponent } from "./profilo/profilo.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
@@ -17,17 +15,9 @@ import { ProfiloComponent } from './profilo/profilo.component';
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent,
-    ProductDetailComponent,
-    HomeComponent,
-    ProfiloComponent,
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  declarations: [AppComponent, HomeComponent, ProfiloComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

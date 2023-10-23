@@ -1,18 +1,58 @@
-<!-- <a [routerLink]="['/']">
-  <h1>My Store</h1>
-</a> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-</head>
-<body>
-  <h1>HOME</h1>
-  <a routerLink="/profilo">PROFILO</a>
-</body>
-</html>
+<!-- abbiamo usato il *ngFor come funzione for-each-->
+<!-- {{ drink.idDrink }} <br />
+        {{ drink.strDrink }} <br />
+        {{ drink.strDrinkThumb }}<br /> -->
+<!-- <img width="50" height="50" [src]="drink.strDrinkThumb" /> -->
+<!-- [src] = "drink" avviene questo => assegna il valore che c'è a destra alla variabile che è a sinistra-->
+
+<!-- Sezione navbar -->
+<nav class="navbar center">
+  <div class="container flex-row">
+    <div class="col-6">
+      <h2>TheCocktailDB</h2>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-4">
+          <button type="button" class="btn btn-light navbar-component">
+            HOME
+          </button>
+        </div>
+        <div class="col-4">
+          <button type="button" class="btn btn-light navbar-component">
+            API
+          </button>
+        </div>
+        <div class="col-4">
+          <p>Search</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Sezione Lista Cocktail-->
+<div class="container">
+  <div class="row justify-content-center">
+    <ul>
+      <li *ngFor="let drink of drinks; center">
+        <div class="col-4">
+          <div class="card m-3" style="width: 9rem">
+            <img
+              [src]="drink.strDrinkThumb"
+              class="card-img-top img-fluid"
+              alt="..."
+            />
+            <div class="card-body">
+              <p>{{ drink.strInstructionsIT }}</p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <hr />
+    </ul>
+  </div>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
