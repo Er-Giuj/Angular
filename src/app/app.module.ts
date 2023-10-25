@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HomeComponent } from "./home/home.component";
 import { ProfiloComponent } from "./profilo/profilo.component";
 import { HttpClientModule } from "@angular/common/http";
+import { ApiService } from "./_services/api.service";
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule,
   ],
   declarations: [AppComponent, HomeComponent, ProfiloComponent],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
