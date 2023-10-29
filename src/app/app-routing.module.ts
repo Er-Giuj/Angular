@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "home/:id", component: HomeComponent },
+  { path: "page-detail", component: PageDetailComponent },
   // { path: 'profilo', component: ProfiloComponent },
   // { path: '**', component: AppComponent },  // Wildcard route for a 404 page
 ]; // sets up routes constant where you define your routes

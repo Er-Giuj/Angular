@@ -11,4 +11,8 @@ export class ApiService {
   searchByF(firstLetter: string) {
     return this.http.get(this.baseUrl + "search.php?f=" + firstLetter);
   }
+  getInfoDrink(id: number) {
+    console.log(id);
+    return this.http.get(this.baseUrl + "lookup.php?i=" + id);
+  }
 }

@@ -8,7 +8,6 @@ import {
   RouterModule,
   Routes,
 } from "@angular/router";
-import { log } from "console";
 
 @Component({
   selector: "app-home",

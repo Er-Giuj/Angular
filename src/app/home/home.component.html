@@ -13,12 +13,14 @@
 <div class="containerTot">
   <!-- Sezione navbar -->
   <nav class="navbar">
-    <div class="container flex-row">
+    <div class="container">
       <div class="col-6">
-        <h2>TheCocktailDB</h2>
+        <div class="row flex-row">
+          <h2 class="text-start">TheCocktailDB</h2>
+        </div>
       </div>
       <div class="col-6">
-        <div class="row flex-direction-end">
+        <div class="row flex-row">
           <div class="col-4 p-0">
             <button type="button" class="btn btn-light navbar-component">
               HOME
@@ -30,28 +32,36 @@
             </button>
           </div>
           <div class="col-4 p-0">
-            <p>Search</p>
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
           </div>
         </div>
       </div>
     </div>
   </nav>
+  <hr />
   <!-- Sezione Lista Cocktail -->
   <div class="container">
     <table>
       <dl>
         <div class="row justify-content-center">
           <dt *ngFor="let drink of drinks" class="col-4">
-            <div class="card m-3" style="width: 9rem">
-              <img
-                [src]="drink.strDrinkThumb"
-                class="card-img-top img-fluid"
-                [alt]="drink.strDrink"
-              />
-              <div class="card-body">
-                <p>{{ drink.strDrink }}</p>
+            <a routerLink="/page-detail">
+              <div class="card m-3" style="width: 9rem">
+                <img
+                  [src]="drink.strDrinkThumb"
+                  class="card-img-top img-fluid"
+                  [alt]="drink.strDrink"
+                />
+                <div class="card-body">
+                  <p>{{ drink.strDrink }}</p>
+                </div>
               </div>
-            </div>
+            </a>
           </dt>
         </div>
         <hr />
@@ -59,21 +69,23 @@
     </table>
   </div>
   <!-- Sezione Alfabeto -->
-  <div class="container flex-row">
-    <div class="row">
-      <a routerLink="/home/a">A</a> / <a routerLink="/home/b">B</a> /
-      <a routerLink="/home/c">C</a> / <a routerLink="/home/d">D</a> /
-      <a routerLink="/home/e">E</a> / <a routerLink="/home/f">F</a> /
-      <a routerLink="/home/g">G</a> / <a routerLink="/home/h">H</a> /
-      <a routerLink="/home/i">I</a> / <a routerLink="/home/j">J</a> /
-      <a routerLink="/home/k">K</a> / <a routerLink="/home/l">L</a> /
-      <a routerLink="/home/m">M</a> / <a routerLink="/home/n">N</a> /
-      <a routerLink="/home/o">O</a> / <a routerLink="/home/p">P</a> /
-      <a routerLink="/home/r">R</a> / <a routerLink="/home/s">S</a> /
-      <a routerLink="/home/t">T</a> / <a routerLink="/home/u">U</a> /
-      <a routerLink="/home/v">V</a> / <a routerLink="/home/w">W</a> /
-      <a routerLink="/home/x">X</a> / <a routerLink="/home/y">Y</a> /
-      <a routerLink="/home/z">Z</a> /
+  <div class="container justify-content-center">
+    <div class="row flex-row">
+      <div class="col-12">
+        <a routerLink="/home/a">A</a>
+        / <a routerLink="/home/b">B</a>/ <a routerLink="/home/c">C</a> /
+        <a routerLink="/home/d">D</a> / <a routerLink="/home/e">E</a> /
+        <a routerLink="/home/f">F</a> / <a routerLink="/home/g">G</a> /
+        <a routerLink="/home/h">H</a> / <a routerLink="/home/i">I</a> /
+        <a routerLink="/home/j">J</a> / <a routerLink="/home/k">K</a> /
+        <a routerLink="/home/l">L</a> / <a routerLink="/home/m">M</a> /
+        <a routerLink="/home/n">N</a> / <a routerLink="/home/o">O</a> /
+        <a routerLink="/home/p">P</a> / <a routerLink="/home/r">R</a> /
+        <a routerLink="/home/s">S</a> / <a routerLink="/home/t">T</a> /
+        <a routerLink="/home/u">U</a> / <a routerLink="/home/v">V</a> /
+        <a routerLink="/home/w">W</a> / <a routerLink="/home/x">X</a> /
+        <a routerLink="/home/y">Y</a> / <a routerLink="/home/z">Z</a> /
+      </div>
     </div>
   </div>
 </div>

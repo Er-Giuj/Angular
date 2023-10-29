@@ -14,4 +14,7 @@ export class DrinkService {
   getElencoDrinks(letter: string) {
     return this.apiService.searchByF(letter);
   }
+  getInfoDrink(id: number) {
+    return this.apiService.getInfoDrink(id);
+  }
 }
