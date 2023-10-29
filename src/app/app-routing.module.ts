@@ -2,12 +2,13 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router"; // CLI imports router
 import { HomeComponent } from "./home/home.component";
 import { AppComponent } from "./app.component";
-import { ProfiloComponent } from "./profilo/profilo.component";
+import { PageDetailComponent } from "./page-detail/page-detail.component";
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
-  // { path: 'profilo', component: ProfiloComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
+  { path: "home/:id", component: HomeComponent },
+  // { path: 'profilo', component: ProfiloComponent },
   // { path: '**', component: AppComponent },  // Wildcard route for a 404 page
 ]; // sets up routes constant where you define your routes
 
