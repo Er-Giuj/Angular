@@ -1,18 +1,23 @@
 h2 {
-  size: 4rem;
-  color: red;
+    size: 4rem;
+    color: red;
 }
+
 .navbar-component {
-  color: white;
-  background-color: red;
+    color: white;
+    background-color: red;
 }
+
 .navbar {
-  height: auto;
-  width: 100%;
+    height: auto;
+    width: 100%;
+    background-color: black;
 }
+
 .container {
-  flex-direction: row;
+    flex-direction: row;
 }
+
 
 /*
 Copyright Google LLC. All Rights Reserved.
