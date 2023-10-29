@@ -38,7 +38,12 @@ input.ng-untouched {
 }
 
 body {
+<<<<<<< HEAD
     margin: 0;
+=======
+  margin: 0;
+  background-color: black;
+>>>>>>> e28bc1c779b2ec289ba42a9d874647779ada8ae0
 }
 
 router-outlet+* {

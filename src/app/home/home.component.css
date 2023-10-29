@@ -15,10 +15,29 @@ h2 {
 }
 
 .container {
+<<<<<<< HEAD
     flex-direction: row;
 }
 
 
+=======
+  width: 100vh;
+  height: auto;
+  flex-direction: row;
+}
+button {
+  width: auto;
+}
+.containerTot {
+  height: auto;
+  width: auto;
+}
+hr {
+  height: 15%;
+  width: 100vh;
+  color: red;
+}
+>>>>>>> e28bc1c779b2ec289ba42a9d874647779ada8ae0
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
