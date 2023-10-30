@@ -33,6 +33,12 @@ export class HomeComponent implements OnInit {
         this.letter = "a";
       } else {
         this.letter = this.id;
+        // stampa del sito appena eseguito il primo accesso al sito(o refresh)
+        this.DrinkService.getElencoDrinks(this.letter).subscribe(
+          (response: any) => {
+            this.drinks = response.drinks;
+          }
+        );
       }
     });
     // stampa del sito appena eseguito il primo accesso al sito(o refresh)
