@@ -20,8 +20,8 @@ export class PageDetailComponent implements OnInit {
       console.log(response.driks);
 
       this.infoDrink = response.drinks[0];
-      console.log(this.infoDrink);
-      console.log(this.infoDrink[0]);
+      // console.log(this.infoDrink);
+      // console.log(this.infoDrink[0]);
     });
   }
 }

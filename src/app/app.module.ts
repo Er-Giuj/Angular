@@ -9,6 +9,7 @@ import { HomeComponent } from "./home/home.component";
 import { PageDetailComponent } from "./page-detail/page-detail.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ApiService } from "./_services/api.service";
+import { TopBarComponent } from "./top-bar/top-bar.component";
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { ApiService } from "./_services/api.service";
     AppRoutingModule,
     HttpClientModule,
   ],
-  declarations: [AppComponent, HomeComponent, PageDetailComponent],
+  declarations: [AppComponent, HomeComponent, PageDetailComponent,TopBarComponent],
   providers: [ApiService],
   bootstrap: [AppComponent],
 })
