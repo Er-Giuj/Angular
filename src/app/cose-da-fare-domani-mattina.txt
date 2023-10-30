@@ -1,4 +1,0 @@
-Cose da fare domani:
-    - App-top-Bar dentro index
-    - Aggiustare che esce sotto nel page detail
-    -Centrare le informazioni degli ingredienti

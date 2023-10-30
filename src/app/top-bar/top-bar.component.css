@@ -1,29 +1,31 @@
 /* Sezione NavBar */
 
 .navbar-component {
-    color: white;
-    background-color: red;
+  color: white;
+  background-color: red;
 }
 
 .navbar {
-    width: 100%;
+  width: 100%;
 }
 
 hr {
-    height: 15%;
-    width: 100%;
-    color: red;
+  height: 15%;
+  width: 100%;
+  color: red;
 }
-
+img {
+  width: 60%;
+  height: 80%;
+}
 
 /* Sezione container */
 
 .container {
-    width: 100%;
-    height: auto;
-    display: flex;
+  width: 100%;
+  height: auto;
+  display: flex;
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

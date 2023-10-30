@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   drinks: any = [];
   letter: string = "";
   id: string = "";
+  letters: string[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   constructor(
     private http: HttpClient,
     private DrinkService: DrinkService,
@@ -33,7 +34,6 @@ export class HomeComponent implements OnInit {
       } else {
         this.letter = this.id;
       }
-      console.log(this.id);
     });
     // stampa del sito appena eseguito il primo accesso al sito(o refresh)
     this.DrinkService.getElencoDrinks(this.letter).subscribe(
